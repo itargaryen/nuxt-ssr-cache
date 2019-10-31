@@ -59,7 +59,7 @@ module.exports = function cacheRenderer(nuxt, config) {
 
     const currentVersion = config.version || config.cache.version;
     const cache = makeCache(config.cache.store);
-    cleanIfNewVersion(cache, currentVersion);
+    // cleanIfNewVersion(cache, currentVersion);
 
     const renderer = nuxt.renderer;
     const renderRoute = renderer.renderRoute.bind(renderer);
