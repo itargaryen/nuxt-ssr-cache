@@ -59,7 +59,7 @@ module.exports = function cacheRenderer(nuxt, config) {
 
     const currentVersion = config.version || config.cache.version;
     const cache = makeCache(config.cache.store);
-    // cleanIfNewVersion(cache, currentVersion);
+    // cleanIfNewVersion(cache, currentVersion); // 1910311653 no clean for common redis
 
     const renderer = nuxt.renderer;
     const renderRoute = renderer.renderRoute.bind(renderer);
